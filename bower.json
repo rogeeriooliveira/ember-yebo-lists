@@ -1,9 +1,4 @@
 {
   "name": "ember-yebo-lists",
-  "dependencies": {
-    "ember": "components/ember#beta"
-  },
-  "resolutions": {
-    "ember": "beta"
-  }
+  "dependencies": {}
 }
