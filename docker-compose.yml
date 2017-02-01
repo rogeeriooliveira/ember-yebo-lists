@@ -2,7 +2,7 @@ version: '2'
 services:
   web:
     build: .
-    command: npm test
+    command: yarn test
     volumes:
       - .:/usr/local/src/
       - node_modules:/usr/local/src/node_modules
