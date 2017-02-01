@@ -2,7 +2,7 @@ version: '2'
 services:
   web:
     build: .
-    command: yarn test
+    command: npm test
     volumes:
       - node_modules:/usr/local/src/node_modules
       - bower_components:/usr/local/src/bower_components
