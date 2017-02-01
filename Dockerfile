@@ -17,6 +17,7 @@ COPY . /usr/local/src
 
 # Install yarn
 RUN curl -o- -L https://yarnpkg.com/install.sh | sh -s
+ENV PATH /root/.yarn/bin:$PATH
     # npm uninstall -g npm && \
     # rm -rf ~/.npm
 
