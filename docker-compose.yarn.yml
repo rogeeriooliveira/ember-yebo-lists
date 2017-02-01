@@ -1,8 +1,10 @@
 version: '2'
 services:
-  web:
-    build: .
-    command: npm test
+  yarn:
+    build:
+      context: .
+      dockerfile: Dockerfile.yarn
+    command: yarn start
     volumes:
       - .:/usr/local/src/
       - node_modules:/usr/local/src/node_modules

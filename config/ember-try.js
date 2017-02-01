@@ -89,5 +89,6 @@ const scenarios = [
 ]
 
 module.exports = {
+  bowerOptions: ['--allow-root=true'],
   scenarios: scenarios
 };

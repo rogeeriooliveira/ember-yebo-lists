@@ -7,13 +7,13 @@ ENV PATH /root/.yarn/bin:$PATH
 ENV TMPDIR /tmp
 
 RUN apk update && apk upgrade && \
-    apk --update add --no-cache --virtual .yarn-deps ca-certificates curl && \
+    apk --update add --no-cache --virtual .yarn-deps ca-certificates curl tar && \
     update-ca-certificates && \
     rm -rf /var/cache/apk/* && \
     curl -o- -L https://yarnpkg.com/install.sh | sh -s && \
+    apk del .yarn-deps && \
     npm uninstall -g npm && \
-    rm -rf ~/.npm && \
-    apk del .yarn-deps
+    rm -rf ~/.npm
 
 # Install yarn
 # RUN curl -o- -L https://yarnpkg.com/install.sh | sh -s && \
@@ -30,8 +30,7 @@ WORKDIR /usr/local/src/
 COPY package.json yarn.lock bower.json /usr/local/src/
 
 # Get project deps
-RUN bower install --allow-root
-RUN yarn --pure-lockfile
+RUN bower install --allow-root &&  yarn --pure-lockfile
 
 # Copy the files
 COPY . /usr/local/src
