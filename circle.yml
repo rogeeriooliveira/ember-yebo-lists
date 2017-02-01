@@ -1,0 +1,12 @@
+test:
+  pre:
+    - yarn
+    - bower install --allow-root
+  override:
+    - yarn test
+deployment:
+  npm:
+    branch: master
+    commands:
+      - echo -e "$NPM_USERNAME\n$NPM_PASSWORD\n$NPM_EMAIL" | yarn login
+      - yarn run 2npm
