@@ -1,0 +1,18 @@
+version: '2'
+services:
+  web:
+    build: .
+    command: yarn test
+    volumes:
+      - node_modules:/usr/local/src/node_modules
+      - bower_components:/usr/local/src/bower_components
+      - tmp:/usr/local/src/tmp
+    ports:
+      - 49152:49152
+      - 4200:4200
+
+volumes:
+  node_modules: {}
+  bower_components: {}
+  tmp: {}
+

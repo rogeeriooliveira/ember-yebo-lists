@@ -1,0 +1,45 @@
+FROM node:argon
+
+# Add yarn to env
+# Ember-cli need this TEMP https://github.com/stefanpenner/async-disk-cache/issues/31
+ENV PATH /root/.yarn/bin:$PATH
+ENV TMPDIR /tmp
+
+# Install yarn
+RUN curl -o- -L https://yarnpkg.com/install.sh | sh -s && \
+    npm uninstall -g npm && \
+    rm -rf ~/.npm
+
+# Install dev deps
+
+# RUN yarn global add mocha nyc istanbul babel-cli isparta
+RUN yarn global add mocha
+RUN yarn global add nyc
+RUN yarn global add babel-cli
+RUN yarn global add istanbul
+RUN yarn global add isparta
+
+# RUN yarn global add phantomjs watchman bower ember-cli@2.10.0
+RUN yarn global add phantomjs
+RUN yarn global add watchman
+RUN yarn global add bower
+RUN yarn global add ember-cli@2.10.0
+
+# App
+WORKDIR /usr/local/src/
+
+# Be more eficient
+COPY package.json yarn.lock bower.json /usr/local/src/
+
+# Get project deps
+RUN bower install --allow-root
+RUN yarn --pure-lockfile
+
+# Copy the files
+COPY . /usr/local/src
+
+# Expose ports
+EXPOSE 80 443
+
+# Image command
+CMD ["yarn", "start"]
