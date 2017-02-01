@@ -1,4 +1,6 @@
 /bower_components
+/bower_components/
+/bower_components/*
 /config/ember-try.js
 /dist
 /tests
@@ -14,3 +16,8 @@
 bower.json
 ember-cli-build.js
 testem.js
+docker-compose.yml
+Dockerfile
+circle.yml
+*.log
+yarn.lock
