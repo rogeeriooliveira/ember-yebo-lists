@@ -15,6 +15,11 @@ RUN bower install --allow-root && npm install
 # Copy the files
 COPY . /usr/local/src
 
+# Install yarn
+RUN curl -o- -L https://yarnpkg.com/install.sh | sh -s
+    # npm uninstall -g npm && \
+    # rm -rf ~/.npm
+
 # Image command
 CMD ["npm", "start"]
 
