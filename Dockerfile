@@ -1,27 +1,30 @@
+# Latest stable node image
 FROM node:argon
+#
+EXPOSE 4200 35729 49152
 
-RUN npm install -q -g gulp bower phantomjs ember-cli watchman
+#
+ENV PATH /root/.yarn/bin:$PATH
 
-EXPOSE 4200 80 443 35729 49152
+# Install yarn
+RUN curl -o- -L https://yarnpkg.com/install.sh | sh -s && \
+    npm uninstall -g npm && \
+    rm -rf ~/.npm
 
+#
+RUN yarn global add gulp bower ember-cli watchman phantomjs-prebuilt
+
+#
 WORKDIR /usr/local/src/
 
 # Be more eficient
-COPY package.json bower.json /usr/local/src/
+COPY package.json yarn.lock bower.json /usr/local/src/
 
 # Get project deps
-RUN bower install --allow-root && npm install
+RUN yarn --pure-lockfile && bower install --allow-root
 
 # Copy the files
 COPY . /usr/local/src
 
-# Install yarn
-RUN curl -o- -L https://yarnpkg.com/install.sh | sh -s
-ENV PATH /root/.yarn/bin:$PATH
-    # npm uninstall -g npm && \
-    # rm -rf ~/.npm
-
 # Image command
-CMD ["npm", "start"]
-
-
+CMD ["yarn", "start"]

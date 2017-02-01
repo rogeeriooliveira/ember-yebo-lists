@@ -10,7 +10,7 @@ const scenarios = [
         'ember': 'lts-2-4'
       }
     },
-    npm: {
+    yarn: {
       devDependencies: {
         'ember-source': null
       }
@@ -26,7 +26,7 @@ const scenarios = [
         'ember': 'lts-2-8'
       }
     },
-    npm: {
+    yarn: {
       devDependencies: {
         'ember-source': null
       }
@@ -42,7 +42,7 @@ const scenarios = [
         'ember': 'release'
       }
     },
-    npm: {
+    yarn: {
       devDependencies: {
         'ember-source': null
       }
@@ -58,7 +58,7 @@ const scenarios = [
         'ember': 'beta'
       }
     },
-    npm: {
+    yarn: {
       devDependencies: {
         'ember-source': null
       }
@@ -74,7 +74,7 @@ const scenarios = [
         'ember': 'canary'
       }
     },
-    npm: {
+    yarn: {
       devDependencies: {
         'ember-source': null
       }
@@ -82,7 +82,7 @@ const scenarios = [
   },
   {
     name: 'ember-default',
-    npm: {
+    yarn: {
       devDependencies: {}
     }
   }
