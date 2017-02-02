@@ -1,5 +1,5 @@
 
-[![Build Status](https://circleci.com/gh/yebo-ecommerce/ember-yebo-lists/tree/:branch.svg?style=shield&circle-token=16e7094b5c52e1fdbd584969bffa76688c0f0b0d)](https://circleci.com/gh/yebo-ecommerce/ember-yebo-lists/tree/master)
+[![Build Status](https://circleci.com/gh/yebo-ecommerce/ember-yebo-lists/tree/master.svg?style=shield&circle-token=16e7094b5c52e1fdbd584969bffa76688c0f0b0d)](https://circleci.com/gh/yebo-ecommerce/ember-yebo-lists/tree/master)
 
 # ember-yebo-lists
 
