@@ -1,8 +1,5 @@
 version: '2'
 services:
   web:
-    build: .
+    image: yurifl/ember
     command: yarn run try
-    ports:
-      - 49152:49152
-      - 4200:4200
