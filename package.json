@@ -1,17 +1,17 @@
 {
   "name": "ember-yebo-lists",
-  "version": "0.0.5",
+  "version": "0.0.7",
   "description": "The default blueprint for ember-cli addons.",
   "keywords": [
     "ember-addon"
   ],
   "license": "MIT",
   "author": "",
+  "repository": "https://github.com/yebo-ecommerce/ember-yebo-lists",
   "directories": {
     "doc": "doc",
     "test": "tests"
   },
-  "repository": "",
   "scripts": {
     "build": "ember build",
     "start": "ember server",
