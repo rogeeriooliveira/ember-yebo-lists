@@ -4,21 +4,22 @@ This README outlines the details of collaborating on this Ember addon.
 
 ## Installation
 
-* `git clone <repository-url>` this repository
+* `git clone git@github.com:yebo-ecommerce/ember-yebo-lists.git` this repository
 * `cd ember-yebo-lists`
-* `npm install`
-* `bower install`
+* `docker-compose run --rm web yarn`
+* `docker-compose run --rm web bower install --allow-root`
 
 ## Running
 
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
+* `docker-compose up`
+* Visit your app at [http://127.0.0.1:4200](http://127.0.0.1:4200).
+* Visit your app's test at [http://127.0.0.1:4200/tests](http://127.0.0.1:4200/tests).
 
 ## Running Tests
 
-* `npm test` (Runs `ember try:each` to test your addon against multiple Ember versions)
-* `ember test`
-* `ember test --server`
+* Give it a read https://guides.emberjs.com/v2.11.0/testing/
+* `docker-compose run --rm web yarn test`
+* `docker-compose -f docker-compose.try.yml up` (Runs `ember try:each` to test your addon against multiple Ember versions)
 
 ## Building
 
