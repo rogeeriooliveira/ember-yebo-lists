@@ -2,5 +2,8 @@
 'use strict';
 
 module.exports = function(/* environment, appConfig */) {
-  return { };
+  var ENV = {
+    podModulePrefix: 'ember-yebo-lists/pods',
+  }
+  return ENV;
 };
