@@ -7,6 +7,7 @@ services:
       - .:/usr/local/embe-yebo-lists/
       - node_modules:/usr/local/embe-yebo-lists/node_modules
       - tmp:/usr/local/embe-yebo-lists/tmp
+      - dist:/usr/local/embe-yebo-lists/dist
     ports:
       - 49152:49152
       - 4200:4200
@@ -14,4 +15,5 @@ services:
 volumes:
   node_modules: {}
   tmp: {}
+  dist: {}
 
