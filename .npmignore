@@ -14,15 +14,3 @@
 bower.json
 ember-cli-build.js
 testem.js
-
-
-*.ember-try.js
-docker-compose.yml
-docker-compose.try.yml
-Dockerfile
-circle.yml
-*.log
-yarn.lock
-.dockerignore
-.yarnclean
-

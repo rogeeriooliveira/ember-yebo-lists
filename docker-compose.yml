@@ -2,11 +2,11 @@ version: '2'
 services:
   web:
     image: yurifl/ember
-    working_dir: /usr/local/ember-yebo-lists
+    working_dir: /usr/local/embe-yebo-lists
     volumes:
-      - .:/usr/local/ember-yebo-lists/
-      - node_modules:/usr/local/ember-yebo-lists/node_modules
-      - tmp:/usr/local/ember-yebo-lists/tmp
+      - .:/usr/local/embe-yebo-lists/
+      - node_modules:/usr/local/embe-yebo-lists/node_modules
+      - tmp:/usr/local/embe-yebo-lists/tmp
     ports:
       - 49152:49152
       - 4200:4200

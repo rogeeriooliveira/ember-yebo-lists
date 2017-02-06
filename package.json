@@ -1,12 +1,12 @@
 {
-  "name": "ember-task-button",
-  "version": "0.0.9",
-  "description": "The default blueprint for ember-cli addons.",
+  "name": "embe-yebo-lists",
+  "version": "1.0.0",
+  "description": "A lists description",
   "keywords": [
     "ember-addon"
   ],
   "license": "MIT",
-  "author": "Yuri Freire",
+  "author": ["Yuri Freire"],
   "directories": {
     "doc": "doc",
     "test": "tests"
