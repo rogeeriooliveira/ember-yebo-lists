@@ -1,4 +1,3 @@
-
 [![Build Status](https://circleci.com/gh/yebo-ecommerce/ember-yebo-lists/tree/master.svg?style=shield&circle-token=16e7094b5c52e1fdbd584969bffa76688c0f0b0d)](https://circleci.com/gh/yebo-ecommerce/ember-yebo-lists/tree/master)
 
 # ember-yebo-lists
@@ -29,3 +28,7 @@ This README outlines the details of collaborating on this Ember addon.
 * `ember build`
 
 For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
+
+
+## Example
+https://github.com/quipuapp/ember-task-button.git
