@@ -2,5 +2,5 @@
 'use strict';
 
 module.exports = {
-  name: 'embe-yebo-lists'
+  name: 'ember-yebo-lists'
 };
