@@ -18,7 +18,8 @@
   "scripts": {
     "build": "ember build",
     "start": "ember server",
-    "test": "ember try:each"
+    "test": "ember test",
+    "tryEach": "ember try:each"
   },
   "dependencies": {
     "ember-cli-babel": "^5.1.7",
