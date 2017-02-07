@@ -21,7 +21,11 @@ This README outlines the details of collaborating on this Ember addon.
 
 * Give it a read https://guides.emberjs.com/v2.11.0/testing/
 * `docker-compose run --rm web yarn test`
-* `docker-compose -f docker-compose.try.yml up` (Runs `ember try:each` to test your addon against multiple Ember versions)
+* `docker-compose run --rm web yarn run tryEach` (Runs `ember try:each` to test your addon against multiple Ember versions)
+
+## New Component
+* `docker-compose run --rm web ember generate component <my-component>`
+* `sudo chown -R "$USER":users .` (Because docker generate files with root)
 
 ## Building
 
