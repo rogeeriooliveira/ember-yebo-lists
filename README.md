@@ -24,7 +24,7 @@ This README outlines the details of collaborating on this Ember addon.
 * `docker-compose run --rm web yarn run tryEach` (Runs `ember try:each` to test your addon against multiple Ember versions)
 
 ## New Component
-* `docker-compose run --rm web ember generate component <my-component>`
+* `docker-compose run --rm web ember generate component <yebo-component>`
 * `sudo chown -R "$USER":users .` (Because docker generate files with root)
 
 ## Building
